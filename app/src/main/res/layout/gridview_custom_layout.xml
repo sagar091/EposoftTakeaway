@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/android_gridview_custom_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more"
+        rv_centered="true"
+        android:layout_width="112dp"
+        android:layout_height="62dp"
+        app:rv_color="@color/white"
+        app:rv_rippleDuration="200">
+
+        <TextView
+            android:id="@+id/gridview_text"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Grid View Item"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

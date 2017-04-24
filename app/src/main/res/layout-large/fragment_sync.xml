@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_item_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_red"
+                    android:gravity="center"
+                    android:text="Category"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_item_subcat"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/round_red"
+                    android:text="Sub-Category"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_item_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/round_red"
+                    android:gravity="center"
+                    android:text="Items"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_item_addons"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:text="Addons"
+                    android:background="@drawable/round_red"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_tables"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Tables"
+                    android:background="@drawable/round_red"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:background="@drawable/round_red"
+                    android:text="Staff"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <TextView
+                    android:id="@+id/sync_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:text="Sync All Data"
+                    android:background="@drawable/round_red"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

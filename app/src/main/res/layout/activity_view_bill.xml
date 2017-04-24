@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_bill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uk.co.eposoft.eposofttakeaway.ViewBillActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@id/toolbar"
+            layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/mapbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/round_red"
+                android:text="Map"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/editbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/round_red"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/lateorderbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/round_red"
+                android:text="Late Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/closetable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/round_red"
+                android:text="Close Table"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:minHeight="40dp"
+                android:id="@+id/cashmode"
+                android:layout_gravity="center"
+                android:text="Cash" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardmode"
+                android:layout_weight="1"
+                android:minHeight="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:text="Card" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/cardatshopmode"
+                android:minHeight="40dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="Card At Shop" />
+
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webview_view_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+        </WebView>
+    </LinearLayout>
+</RelativeLayout>

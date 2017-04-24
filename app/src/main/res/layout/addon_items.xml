@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/items_addons"
+    android:orientation="horizontal">
+
+
+    <ImageButton
+        android:visibility="invisible"
+        android:id="@+id/btnremove"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/standard_padding_small"
+        android:background="@null"
+        android:src="@drawable/ic_action_action_search"
+        android:text="Remove"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_padding_small"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:text="+"
+        android:id="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/addonNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_padding_small"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/secondary_text" />
+
+    <TextView
+        android:id="@+id/addOnPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/standard_padding_small"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text=""
+        android:padding="8dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/primary_text" />
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome_sync"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uk.co.eposoft.eposofttakeaway.WelcomeSyncActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Eposoft System"
+            android:textColor="@color/eposoft"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Be Relax\nWe'll set-up everything for you!"
+            android:textColor="@color/eposoft"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.ContentLoadingProgressBar
+                android:id="@+id/progressBarcontent"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:minHeight="50dp"
+                android:progress="1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/eposoft"
+                android:textSize="24sp"
+                android:layout_below="@+id/progressBar1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_below="@id/textView1"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/eposoft"
+                android:text="Please Wait..."
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

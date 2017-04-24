@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/table"
+        android:icon="@drawable/table_white"
+        android:title="Tables"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/sauces"
+        android:title="Sauces"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/sauces"/>
+
+    <item
+        android:id="@+id/changes"
+        android:title="Changes"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/manual"/>
+
+    <item
+        android:id="@+id/manual"
+        android:title="Manual"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/manual"/>
+
+    <item
+        android:id="@+id/reset"
+        android:title="Reset"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/manual"/>
+
+
+    <item
+        android:id="@+id/mysearch_bar"
+        android:icon="@drawable/ic_action_action_search"
+        android:title="Search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/cart_small"
+        android:title="Cart"
+        app:showAsAction="always" />
+
+</menu>

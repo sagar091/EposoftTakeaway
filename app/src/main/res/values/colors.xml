@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#65727f</color>
+    <color name="colorPrimaryDark">#20a3a2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="eposoft">#29cccb</color>
+
+
+    <color name="login_button">#42CC6F</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="lineSelector">#00000000</color>
+    <color name="background_grid">#58636E</color>
+    <color name="header">#2c3137</color>
+    <color name="header_text">#2DC6B2</color>
+
+    <color name="selected_option">#65727f</color>
+
+
+    <color name="secondary_text">#727272</color>
+    <color name="primary_text">#212121</color>
+    <color name="colorButton">#00ffff</color>
+
+
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="layout_backgroung_grey">#a4a4a4</color>
+
+
+    <string-array name="rainbow">
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+        <item>#f67b54</item>
+        <item>#29cccb</item>
+        <item>#929bea</item>
+        <item>#eb89bf</item>
+        <item>#fccc5c</item>
+        <item>#ec5565</item>
+        <item>#9bd26d</item>
+        <item>#5ca0eb</item>
+
+    </string-array>
+
+
+    <color name="theme_primary">#2196F3</color>
+    <color name="theme_primary_dark">#1976D2</color>
+    <color name="theme_primary_light">#BBDEFB</color>
+
+    <color name="theme_background">#FFFFFF</color>
+    <color name="theme_background_inverse">#212121</color>
+
+    <color name="theme_accent_1">#212121</color>
+
+    <color name="theme_primary_trans">#99212121</color>
+
+    <color name="theme_primary_text">#212121</color>
+    <color name="theme_secondary_text">#727272</color>
+    <color name="theme_primary_text_inverted">#ffffff</color>
+    <color name="theme_secondary_text_inverted">#8affffff</color>
+    <color name="theme_icons">#FFFFFF</color>
+    <color name="theme_divider">#B6B6B6</color>
+
+</resources>

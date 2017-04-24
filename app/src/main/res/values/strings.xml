@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Eposoft Takeaway</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="hello_world">Hello World</string>
+    <string name="ERROR">Error Title</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+
+    <string name="no">2000</string>
+    <string name="less">2001</string>
+    <string name="half">2002</string>
+    <string name="on">2003</string>
+    <string name="with">2004</string>
+    <string name="onburger">2005</string>
+    <string name="onchips">2006</string>
+
+
+</resources>

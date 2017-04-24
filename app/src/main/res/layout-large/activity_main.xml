@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.andexert.library.RippleView
+        android:id="@+id/ripple"
+        rv_centered="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_color="@color/white"
+        app:rv_rippleDuration="200">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+    </com.andexert.library.RippleView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ripple"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/epos_login_logo"
+                    tools:ignore="ContentDescription" />
+            </com.andexert.library.RippleView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/prompt_email"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <com.andexert.library.RippleView
+                rv_centered="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rv_color="@color/white"
+                app:rv_rippleDuration="200">
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/login_button"
+                    android:text="@string/action_sign_in"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

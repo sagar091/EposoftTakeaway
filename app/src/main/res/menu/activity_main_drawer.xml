@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_calllogs"
+            android:icon="@drawable/phone_call"
+            android:title="Call Logs" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/menu"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_manages"
+            android:icon="@drawable/manage"
+            android:title="Manage" />
+        <item
+            android:id="@+id/nav_tables"
+            android:icon="@drawable/tables"
+            android:title="Tables" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_sync"
+                android:icon="@drawable/sync"
+                android:title="Sync" />
+
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/contact"
+                android:title="Contact Us" />
+
+            <item
+                android:id="@+id/nav_rateus"
+                android:icon="@drawable/star"
+                android:title="Rate Us" />
+
+        </menu>
+    </item>
+
+</menu>

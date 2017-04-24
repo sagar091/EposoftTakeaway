@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_fixed" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/cartEmptyTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Cart is Empty"
+            android:textSize="30sp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/contentHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/contentHolderLinerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                tools:context=".activity.CartViewActivity">
+
+
+                <LinearLayout
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/collectionRadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Collection"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+                        <RadioButton
+                            android:id="@+id/deliveryRadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Delivery"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <RadioButton
+                            android:id="@+id/instoreRadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Instore"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/yourOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Your Order"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+                <include layout="@layout/line" />
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/offerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/userOffer"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Click here to choose you offer"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="22sp"
+                        tools:ignore="HardcodedText" />
+                </FrameLayout>
+
+                <include layout="@layout/line" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cartRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:clipToPadding="false"
+                    android:padding="@dimen/item_gallery_padding"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                <include layout="@layout/line" />
+
+                <LinearLayout
+                    android:id="@+id/subTotalHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/subTotalTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Sub Total"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+                    <TextView
+                        android:id="@+id/subTotalPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:textColor="@color/primary_text" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bagHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/bagTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Bag Charge"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:id="@+id/bagPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/primary_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bankHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/bankTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Bank Charge"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:id="@+id/bankPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/primary_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/onlinediscountHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/discountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Bank Charge"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:id="@+id/discountPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/primary_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/TotalHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/totalTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Total"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+                    <TextView
+                        android:id="@+id/totalPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/standard_padding_small"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:textColor="@color/primary_text" />
+
+                </LinearLayout>
+
+                <include layout="@layout/line" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/infoEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/edit_rect"
+                        android:gravity="left"
+                        android:hint="e.g. Instructions about your order"
+                        android:minLines="2"
+                        android:padding="8dp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/couponLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/couponAppliedTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@android:color/darker_gray"
+                            android:drawableEnd="@drawable/ic_close_white_24dp"
+                            android:drawableRight="@drawable/ic_close_white_24dp"
+                            android:visibility="gone" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/couponInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/couponTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="8dp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <com.andexert.library.RippleView
+                            rv_centered="true"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            app:rv_color="@color/theme_secondary_text_inverted"
+                            app:rv_rippleDuration="200">
+
+                            <info.hoang8f.widget.FButton
+                                android:id="@+id/couponApplyButton"
+                                android:layout_width="@dimen/button_width"
+                                android:layout_height="wrap_content"
+                                android:text="Apply"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                fbutton:buttonColor="@color/fbutton_color_carrot"
+                                fbutton:cornerRadius="5dp"
+                                fbutton:shadowColor="@color/colorPrimaryDark"
+                                fbutton:shadowEnabled="true"
+                                fbutton:shadowHeight="5dp" />
+                        </com.andexert.library.RippleView>
+
+                    </LinearLayout>
+
+                    <com.andexert.library.RippleView
+                        rv_centered="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:visibility="visible"
+                        app:rv_color="@color/theme_divider"
+                        app:rv_rippleDuration="200">
+
+                        <CheckBox
+                            android:id="@+id/allergyButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="?actionBarSize"
+                            android:text="Check for allergies"
+                            android:textAllCaps="false" />
+                    </com.andexert.library.RippleView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.andexert.library.RippleView
+                            rv_centered="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            app:rv_color="@color/theme_secondary_text_inverted"
+                            app:rv_rippleDuration="200">
+
+                            <info.hoang8f.widget.FButton
+                                android:id="@+id/checkOutButton"
+                                android:layout_width="@dimen/button_width"
+                                android:layout_height="wrap_content"
+                                android:text="Check out"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                fbutton:buttonColor="@color/login_button"
+                                fbutton:cornerRadius="5dp"
+                                fbutton:shadowColor="@color/colorPrimaryDark"
+                                fbutton:shadowEnabled="true"
+                                fbutton:shadowHeight="5dp" />
+                        </com.andexert.library.RippleView>
+
+                        <com.andexert.library.RippleView
+                            rv_centered="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            app:rv_color="@color/theme_secondary_text_inverted"
+                            app:rv_rippleDuration="200">
+
+                            <info.hoang8f.widget.FButton
+                                android:id="@+id/checkCancleButton"
+                                android:layout_width="@dimen/button_width"
+                                android:layout_height="wrap_content"
+                                android:text="Cancel"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:visibility="gone"
+                                fbutton:buttonColor="@color/login_button"
+                                fbutton:cornerRadius="5dp"
+                                fbutton:shadowColor="@color/colorPrimaryDark"
+                                fbutton:shadowEnabled="true"
+                                fbutton:shadowHeight="5dp" />
+                        </com.andexert.library.RippleView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

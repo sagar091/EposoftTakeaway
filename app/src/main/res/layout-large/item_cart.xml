@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menuHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/itemHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="?actionBarSize"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_padding_small"
+                android:background="@null"
+                android:text="Remove"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/item_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/minus"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/totalNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_margin="2dp"
+                android:padding="3dp"
+                android:textColor="@color/secondary_text"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/item_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:scaleType="fitXY"
+                android:src="@drawable/plus"
+
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/btnremove"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_padding_small"
+                android:background="@null"
+                android:text="Remove"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_padding_small"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:padding="8dp"
+                android:text="9 inch Pizza"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/secondary_text" />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_padding_small"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:text="£3.15"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/primary_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addOnHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/addon_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
